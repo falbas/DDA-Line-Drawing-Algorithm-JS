@@ -11,6 +11,23 @@ h1 {
   width: 450px;
 }
 
+input {
+  width: 50px;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: auto;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  margin-bottom: 0.5rem;
+}
+
 .top {
   display: flex;
   height: 420px;

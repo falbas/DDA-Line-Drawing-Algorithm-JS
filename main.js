@@ -1,9 +1,13 @@
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function putPixel(x, y) {
   ePixel = document.getElementById(`pixel-${x}-${y}`)
   ePixel.style.backgroundColor = 'black'
 }
 
-function ddaLineDrawing(x1, y1, x2, y2) {
+async function ddaLineDrawing(x1, y1, x2, y2) {
   let dx = x2 - x1
   let dy = y2 - y1
   let step = Math.max(Math.abs(dx), Math.abs(dy))
@@ -13,6 +17,7 @@ function ddaLineDrawing(x1, y1, x2, y2) {
   for (let i = 0; i <= step; i++) {
     console.log(x1 + ' ' + y1)
     putPixel(Math.round(x1), Math.round(y1))
+    await sleep(200)
     x1 += xinc
     y1 += yinc
   }

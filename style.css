@@ -2,13 +2,17 @@
   box-sizing: border-box;
 }
 
-h1 {
-  text-align: center;
+.container {
+  margin: 0 5rem;
 }
 
-.display-container {
-  margin: auto;
-  width: 450px;
+.container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-row {
+  display: flex;
 }
 
 input {
@@ -26,6 +30,10 @@ input::-webkit-inner-spin-button {
 
 button {
   margin-bottom: 0.5rem;
+}
+
+.display {
+  width: 450px;
 }
 
 .top {
@@ -74,4 +82,16 @@ button {
   height: 20px;
   border: 1px solid grey;
   display: inline;
+}
+
+#formula {
+  margin-left: 1rem;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td, th {
+  padding: 0 1rem;
 }

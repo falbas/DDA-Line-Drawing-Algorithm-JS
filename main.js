@@ -57,6 +57,7 @@ async function naiveLineDrawing(x1, y1, x2, y2) {
     let y = m * (x - x1) + y1
     console.log(x + ' ' + y)
     putPixel(x, Math.round(y))
+    await sleep(200)
   }
 }
 
@@ -91,6 +92,6 @@ inputForm.addEventListener('submit', function (e) {
   const y1 = Number(document.getElementById('y1').value)
   const x2 = Number(document.getElementById('x2').value)
   const y2 = Number(document.getElementById('y2').value)
-  // ddaLineDrawing(x1, y1, x2, y2)
   naiveLineDrawing(x1, y1, x2, y2)
+  // ddaLineDrawing(x1, y1, x2, y2)
 })
